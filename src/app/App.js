@@ -50,6 +50,7 @@ class App extends Component {
     const pokenum =(e.target.elements[0].value);
     this.getPokemon(pokenum);
   }
+  
   ramdonPokemon = () => {
     // retorna un valor aleatorio valido para pokemons
     let pokenum = Math.floor(Math.random() * 898) + 1;
@@ -60,7 +61,7 @@ class App extends Component {
       <div className='container p-4'>
           <div className='row'>
               <div className='col-md-6 mx-auto'>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/archive/9/98/20110819041634%21International_Pokémon_logo.svg" alt="poke" />
+                <img src="/logo.png" alt="poke" />
                 <PokeForm formTrigger={this.formTrigger} ramdonPokemon={this.ramdonPokemon}/>
                 <PokeInfo {... this.state} />
               </div>
